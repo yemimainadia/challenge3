@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    box-sizing  : border-box;
+    border-width: 0;
+    border-style: solid;
+    font-family : 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    margin          : 0;
+}
+
+button {
+    background-color  : transparent;
+    -webkit-appearance: button;
+    padding           : 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.timeline-item {
+    background-color  : #ffffff;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    max-width         : 80%;
+    margin            : 2rem auto;
+}
+
+.layout-flex {
+    display: flex;
+}
+
+.header-account,
+.content,
+.comments-area {
+    padding: 1rem 0.9rem;
+}
+
+/* header */
+.header-account {
+    align-items    : center;
+    align-content  : flex-start;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+.avatar {
+    border-radius: 50%;
+    height       : 40px;
+    line-height  : 40px;
+    min-width    : 40px;
+    margin       : 0 0.75rem 0 0;
+    width        : 40px;
+}
+
+.account-info {
+    align-items   : center;
+    align-content : center;
+    flex-direction: row;
+}
+
+.more-menu {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.more-menu i {
+    font-size  : 24px;
+    width      : 24px;
+    height     : 24px;
+    min-width  : 24px;
+    min-height : 24px;
+    line-height: 24px;
+}
+
+.content-account {
+    flex-direction: column;
+    font-weight   : 400;
+    font-size     : 0.875rem;
+}
+
+.username {
+    color: #039be5;
+}
+
+.time {
+    color: #6e6e6e;
+}
+
+/* end of Header */
+/* Content */
+.content {
+    padding-top: 0.25rem;
+}
+
+.content .message {
+    font-size: 0.875rem;
+}
+
+.content .media-gallery {
+    margin-top: 1.45rem;
+}
+
+.content img {
+    width: 100%;
+}
+
+.timeline-item .action {
+    margin: 1rem 0 0.5rem;
+}
+
+.timeline-item .action button {
+    color      : #656565;
+    font-size  : 0.875rem;
+    font-weight: 400;
+}
+
+.timeline-item .action button:hover {
+    cursor: pointer;
+    color : #35a5dd;
+}
+
+.timeline-item .action button:not(:nth-last-child(1)) {
+    margin-right: 0.5rem;
+}
+
+.timeline-item .action button>i+span {
+    margin: 0 0.35rem;
+}
+
+/* end of Content */
+/* Comments */
+.comments-area {
+    align-content   : flex-start;
+    flex-direction  : column;
+    justify-content : flex-start;
+    background-color: #eaeaea;
+}
+
+.comments-area>div:not(:nth-last-child(1)) {
+    margin-bottom: 1.25rem;
+}
+
+.comments-count span {
+    color      : #656565;
+    font-size  : 0.875rem;
+    font-weight: 400;
+}
+
+.comments-count span+i {
+    font-size  : 0.75rem;
+    margin-left: 0.25rem;
+}
+
+.comments-count button:hover {
+    cursor: pointer;
+}
+
+.comments-count button:hover i:before {
+    content: "\f077";
+}
+
+.comment-data {
+    flex-direction: row;
+}
+
+.comment-data .username {
+    color      : #404040;
+    font-weight: 500;
+    font-size  : 0.875rem;
+}
+
+.comment-data .time-posted {
+    color      : #868686;
+    margin-left: 0.125rem;
+    font-size  : 0.75rem;
+    font-weight: 400;
+}
+
+.comment-data .comment-text {
+    color      : #535353;
+    font-size  : 0.875rem;
+    font-weight: 400;
+}
+
+.comment-action {
+    align-items: center;
+    margin     : 1rem 0;
+}
+
+.comment-action .reply,
+.comment-action .report:hover i {
+    color: #039be5;
+}
+
+.comment-action .reply {
+    margin-right: 0.875rem;
+}
+
+.comment-action .reply:hover {
+    color: #59b3e0;
+}
+
+/* end of Comments */
+/* Reply */
+.comment-reply .form-wrapper,
+.comment-reply form,
+.comment-reply form textarea {
+    width: 100%;
+}
+
+.comment-reply form textarea {
+    border       : 1px solid #d5d5d5;
+    min-height   : 4.5rem;
+    padding      : 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size    : 0.75rem;
+}
+
+.comment-reply button {
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    background-color  : #039be5;
+    border-radius     : 3px;
+    color             : #ffffff;
+    padding           : 0 0.75rem;
+    min-height        : 1.875rem;
+    min-width         : inherit;
+    line-height       : 1.875rem;
+}
+
+.comment-reply button span {
+    text-transform: capitalize;
+}
+
+.comment-reply button:hover {
+    background-color: #35a5dd;
+}
+
+/* end of Reply */
